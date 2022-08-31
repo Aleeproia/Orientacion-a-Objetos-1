@@ -103,14 +103,7 @@ public class Mamifero extends Object {
 	}
 	
 	public boolean tieneComoAncestroA(Mamifero unMamifero) {
-		boolean ok=false;
-		if((unMamifero.getMadre()!= null)||(unMamifero.getPadre()!=null)){
-			ok=true;
-			return ok;
-		}
-		else {
-			return ok;
-		}
+		
 	}
 	
 	
