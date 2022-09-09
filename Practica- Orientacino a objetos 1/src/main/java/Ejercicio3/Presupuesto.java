@@ -6,10 +6,12 @@ public class Presupuesto {
 	
 	private LocalDate fecha;
 	private String cliente;
-	private ArrayList<Item> items = new ArrayList<Item>(); 
+	private ArrayList<Item> items; 
 	
 	public Presupuesto cliente(String string) {
 		this.setCliente(string);
+		items = new ArrayList<Item>();
+		this.fecha=LocalDate.now();
 		return this;
 	}
 	
