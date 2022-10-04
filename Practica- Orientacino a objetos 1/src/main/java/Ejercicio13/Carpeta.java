@@ -11,7 +11,6 @@ public class Carpeta {
 	
 
 	public Carpeta(String nombre) {
-		super();
 		this.nombre = nombre;
 		this.emails = new ArrayList<Email>();
 	}
@@ -28,7 +27,7 @@ public class Carpeta {
 		return emails;
 	}
 
-	public void agregarInbox(Email email) {
+	public void agregarMail(Email email) {
 		this.emails.add(email);
 		
 	}
@@ -36,7 +35,10 @@ public class Carpeta {
 	public void quitar(Email email) {
 		this.emails.remove(email);	
 	}
-
+	
+	public Email buscarEmail(String texto) {
+		return this.emails.stream().filter(e -> e.getTitulo().contains(texto) || e.getCuerpo().contains(texto)).findFirst().orElse(null);
+	}
 
 	
 }
