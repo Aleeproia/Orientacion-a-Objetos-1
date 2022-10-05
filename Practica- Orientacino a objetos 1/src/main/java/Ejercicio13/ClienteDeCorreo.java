@@ -9,6 +9,7 @@ public class ClienteDeCorreo {
 	
 	public ClienteDeCorreo() {
 		carpetas.add(inbox);
+		this.carpetas = new ArrayList<Carpeta>();
 	}
 	
 	public void recibir(Email email) {
