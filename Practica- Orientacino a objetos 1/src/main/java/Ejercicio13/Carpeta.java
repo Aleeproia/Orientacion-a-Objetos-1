@@ -40,5 +40,8 @@ public class Carpeta {
 		return this.emails.stream().filter(e -> e.getTitulo().contains(texto) || e.getCuerpo().contains(texto)).findFirst().orElse(null);
 	}
 
+	public int tamañoCarpeta() {
+		return emails.stream().mapToInt(e -> e.tamañoEmail()).sum();
+	}
 	
 }
