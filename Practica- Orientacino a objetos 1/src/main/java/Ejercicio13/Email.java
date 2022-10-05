@@ -33,6 +33,9 @@ public class Email {
 		return this.adjuntos;
 	}
 	
+	public int tamañoEmail() {
+		return this.titulo.length() + this.cuerpo.length() + adjuntos.stream().mapToInt(a -> a.tamaño()).sum();
+	}
 	
 	
 
